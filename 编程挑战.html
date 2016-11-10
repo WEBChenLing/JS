@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>编程挑战</title>
+		
+		
+		<style type="text/css">
+			body{font: "微软雅黑"; font-size: 15px; color: #0000FF;}
+			#txt{
+				border: black solid 1px;
+				padding: 5px;
+				height: 400px;
+				width: 600px;
+			}
+			
+			p{
+				line-height: 15px;
+				text-indent: 30px;
+			}
+		</style>	
+	</head>
+	
+	<body>
+		
+		<h2>JavaScript课程</h2>
+		<div id="txt">
+			<h5>JavaScript为网页添加动态效果并实现与用户交互的功能</h5>
+			<p>1.JavaScript入门篇，让不懂JS的你，快速了解JS。</p>
+			<p>2.JavaScript进阶篇，让你掌握JS的基础语法,函数，数组，事件，内置对象，BOM浏览器，DOM操作。</p>
+			<p>3.学完以上两门基础课后，再深入学习JavaScript的变量作用域，事件，对象，运动，cookie，正则表达式，ajax等课程。</p>
+		</div>
+		<form>
+			<input type="button" value="改变颜色" onclick=" changeColor()" />
+			<input type="button" value="改变尺寸" onclick=" changeWidth()" />
+			<input type="button" value="隐藏" onclick=" hidetext()" />
+			<input type="button" value="显示" onclick=" showtext()" />
+			<input type="button" value="取消设置" onclick=" txt1()" />
+		</form>
+		
+		<script type="text/javascript">
+			var mychar = document.getElementById("txt");
+			//改变颜色
+			function changeColor(){
+				mychar.style.color="crimson";
+			mychar.style.background=" burlywood";
+			}
+			//改变尺寸
+			function changeWidth(){
+				mychar.style.width="300px";
+			mychar.style.height="500px";
+			}
+			//隐藏
+			function hidetext(){
+				mychar.style.display="none";
+			}
+			//显示
+			function showtext(){
+				mychar.style.display="block";
+			}
+			//重新设置
+			function txt1(){
+				var re = confirm("是否需要重置设置？");
+			if(re==true){
+				mychar.removeAttribute("style");
+			}
+			else{
+				document.write("为您保留。");
+				}
+			}
+			
+			var arr = ['*','##',"***","&&","****","##*"]
+  			arr[7]="**";
+  			
+  			
+		</script>
+	</body>
+</html>

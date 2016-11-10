@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>鼠标移开事件 </title>
+<script type="text/javascript">
+	function openwin(){
+		window.open('http://www.imooc.com');
+	}
+	function onmouseover1(){
+		confirm("请输入密码");
+	}
+	function onmouseout1(){
+	  alert("不要移开，点击后进行慕课网!"); 
+	}
+	function onfocus1(){
+		alert("请选择你的职业！");
+	}
+	function onblur1(){
+		alert("请确定已输入密码后，再移开！");
+	}
+	function onselect1(){
+		alert("内部选中事件");
+	}
+	function onchange1(){
+		alert("你在改变");
+	}
+	function onload1(){
+		alert("别急，正在为您搬运......");
+	}
+</script>
+</head>
+<body onload="onload1()">
+	<!--
+    	作者：1114350133@qq.com
+    	时间：2016-10-09
+    	描述：onload 加载事件
+    -->
+<form>
+	<input type="button" name="onclick" value="快点我" onclick="openwin()" /><br />
+	<!--
+    	作者：1114350133@qq.com
+    	时间：2016-09-20
+    	描述：点击事件，onclick()
+    -->
+    <input type="button" name="onmouseover" value="放上来" onmouseover="onmouseover1()" /><br />
+    <!--
+    	作者：1114350133@qq.com
+    	时间：2016-09-20
+    	描述：鼠标经过事件，onmouseover()
+    -->
+	<a href="http://www.imooc.com" onmouseout="onmouseout1()">不要离开我</a><br />
+	  <!--
+	  	作者：1114350133@qq.com
+	  	时间：2016-09-20
+	  	描述：鼠标移开事件，onmouseout()
+	  -->
+	请选择的你的职业：
+	<form>
+		<select name="carrer" onfocus="onfocus1()">
+			<option>学生</option>
+			<option>教师</option>
+			<option>工程师</option> 
+      		<option>演员</option> 
+      		<option>会计</option> 
+		</select>
+	</form>
+	<!--
+    	作者：1114350133@qq.com
+    	时间：2016-09-28
+    	描述：<select>
+    			<option></option>
+    		 </select>
+    		 下拉列表
+    -->
+	<br />
+	<form>
+		用户：<input name="username" type="text" onblur="onblur1()" /><br />
+		密码：<input name="password" type="text" />
+	</form> 
+	<!--
+    	作者：1114350133@qq.com
+    	时间：2016-10-09
+    	描述：onblur 失焦事件
+    -->
+	<br />
+	<form>
+		个人简介：<br />
+		<textarea name="个人简介" cols="50" rows="5" onselect="onselect1()">请写入个人简历	</textarea>
+	</form>
+	<!--
+    	作者：1114350133@qq.com
+    	时间：2016-10-09
+    	描述：onselect 内容选中事件
+    -->
+	<br />
+	<form>
+		个人简介:<br />
+		<textarea name="个人简介（改）" cols="50" rows="5" onchange="onchange1()">快来改边自己</textarea>
+	</form>
+	<!--
+    	作者：1114350133@qq.com
+    	时间：2016-10-09
+    	描述：onchange 文本框内改变事件
+    -->
+    <br />
+    
+</form>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>获取元素</title>
+		<!--
+        	作者：1114350133@qq.com
+        	时间：2016-08-31
+        	描述：尝试将下列语句放到P标签之后
+        
+		<script type="text/javascript">
+			var mye=document.getElementById("con");//获取元素存储在变量mye中
+			document.write(mye);//因为没有值，输出null。
+		</script>
+		-->
+		<style>
+			body{font: "微软雅黑"; font-size: 30px;}
+			.one{
+				font-family: "book antiqua";
+				color: blue;
+				height: 50px;
+				width:80px;
+				background: antiquewhite;
+			}
+		</style>
+	</head>
+	<body>
+		<h3>hello!</h3>
+		<p id="con">I love you.</p>
+		
+		<script type="text/javascript">
+			var mye=document.getElementById("con");//获取元素存储在变量mye中
+			document.write(mye+'<br />');//输出获取的P标签
+			document.write("原始标题："+mye.innerHTML+'<br />');//Object.innerHTML获取HTML的内容，  Object为获取的元素对象，如上面通过get获取的元素。
+			
+			mye.innerHTML="Hello world!";//将mye修改为Hello world!
+			document.write("修改过的标题："+mye.innerHTML+"<br />");//在这里 mye的值已经变了，通过mye.innerHTML获取内容。
+		
+			mye.style.color="red";
+			mye.style.background="black";
+			mye.style.width="100px";
+			
+			//Obj.style.display 控制Obj是否显示。
+			function hidetext(){
+				mye.style.display="none";//none 隐藏
+			}
+			
+			function showtext(){
+				mye.style.display="block";//block 显示
+			}
+			
+			function add(){
+				var p1=document.getElementById("p1");
+				p1.className="one";
+			}
+		</script>
+		
+			<input type="button" name="hidetext" value="隐藏" onclick="hidetext()" />
+			<input type="button" name="showtext" value="显示" onclick="showtext()" />
+			
+			<p id="p1">测试</p>
+			<input type="button" name="添加样式" value="添加样式" onclick=" add()" />
+		
+	</body>
+</html>

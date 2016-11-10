@@ -1,0 +1,36 @@
+<!DOCTYPE  HTML>
+<html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>函数</title>
+
+<script type="text/javascript">
+
+//定义函数
+	function mychar(a,b){
+	    sum = a-b;
+
+//函数体，判断两个整数比较的三种情况
+	    if(sum>0){
+	        return a;
+	    }
+	    else if(sum<0){
+	        return b;
+	    }
+	    else{
+	        var c="不分伯仲啊";
+	        return c;  
+	    }
+	}
+	num1 =mychar(5,4);
+	num2 =mychar(6,3);
+	num3 =mychar(6,6);
+//调用函数，实现下面两组数中，返回较大值。
+  document.write(" 5 和 4 的较大值是:"+num1+"<br/>");
+  document.write(" 6 和 3 的较大值是:"+num2+"<br/>"); 
+  document.write("6 和 6 的谁大:"+num3);
+</script>
+</head>
+<body>
+</body>
+</html>
