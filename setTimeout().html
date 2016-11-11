@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>计时器</title>
+		<script type="text/javascript">
+			var num=0;
+			function startCount(){
+				document.getElementById('count').value=num;
+				num=num+1;
+				i=setTimeout("startCount()",1000);
+			}
+			
+			function stopCount(){
+				clearTimeout(i);
+			}
+		</script>
+	</head>
+	<body>
+		<form>
+			<input type="text" name="count" id="count"  />
+			<input type="button" value="start" onclick="startCount()" />
+			<input type="button" value="stop" onclick="stopCount()" />
+			<!--
+            	作者：1114350133@qq.com
+            	时间：2016-11-11
+            	描述：一个简单的计时器.
+            -->
+		</form>
+	</body>
+</html>
