@@ -10,12 +10,13 @@
     attime=time.getHours()+":"+time.getMinutes()+":"+time.getSeconds();
     document.getElementById("clock").value = attime;
   }
-  var int = setInterval(clock,1000);  
+  var i = setInterval(clock,1000);  
 </script>
 </head>
 <body>
 <form>
 <input type="text" id="clock" size="50"  />
+<input type="button" value="停止计时" onclick="clearInterval(i)" />
 </form>
 </body>
 </html>
