@@ -7,6 +7,9 @@
 			function GoBack(){
 				history.back();
 			}
+			function GoForward(){
+				history.forward();
+			}
 		</script>
 	</head>
 	<body>
@@ -18,9 +21,16 @@
 		<a href="#target2">第二个锚点</a>
 		<a name="target2"></a>
 		<br /><br />
+		<a href="http://www.baidu.com">
+		<input type="button" value="百度" /></a>
+		<br />
 		使用下面按钮，实现返回前一个页面：
 		<form>
 			<input type="button" value="返回前一个页面" onclick="GoBack()"/>
+		</form>
+		使用下面按钮，实现返回后一个按钮：
+		<form>
+			<input type="button" value="返回后一个页面" onclick="GoForward()" />
 		</form>
 	</body>
 </html>
